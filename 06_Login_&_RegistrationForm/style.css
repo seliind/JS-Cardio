@@ -40,7 +40,8 @@ a {
   column-gap: 25px;
 }
 .nav_link:hover {
-  color: #d9d9d9;
+  color: #568234;
+  font-weight: 500;
 }
 .button {
   padding: 6px 24px;
@@ -91,9 +92,17 @@ a {
   padding: 25px;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.1);
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   transition: all 0.4s ease-out;
+}
+.home.show .form_container {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.form_container.active .login_form {
+  display: none;
 }
 .form_close{
   position: absolute;
@@ -132,7 +141,6 @@ a {
 }
 .input_box i{
   position: absolute;
-  top: 50%;
   transform: rotateY(-50%);
   font-size: 20px;
   color: #707070;
@@ -171,7 +179,7 @@ a {
 .checkbox label {
   font-size: 12px;
   cursor: pointer;
-  user-select: none;
+  /* user-select: none; */
   color: #0b0217;
 }
 .form_container .button {
