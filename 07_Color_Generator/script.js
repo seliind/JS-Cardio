@@ -4,6 +4,7 @@ const selectMenu = document.querySelector(".select-box select");
 const textarea = document.querySelector("textarea");
 const refreshBtn = document.querySelector(".refresh");
 const copyBtn = document.querySelector(".copy")
+const docBody = document.body;
 
 const getRandomColor = () => {
   const letters = "0123456789ABCDEF";
@@ -22,6 +23,8 @@ const generateGradient = (isRandom) => {
   }
   const gradient = `linear-gradient(${selectMenu.value}, ${colorInputs[0].value}, ${colorInputs[1].value})`;
   gradientBox.style.background = gradient;
+  docBody.style.background = gradient;
+  copyBtn.style.background = colorInputs[0].value;
   textarea.value = `background: ${gradient};`;
 };
 
