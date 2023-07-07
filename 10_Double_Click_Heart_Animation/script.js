@@ -1,6 +1,6 @@
 const image = document.querySelector(".container");
 const heartIcon = document.querySelector(".heart");
-
+import { hello } from "./hello.js"
 image.addEventListener("dblclick", (e) => {
 
     let xValue = e.clientX - e.target.offsetLeft;
@@ -14,3 +14,5 @@ image.addEventListener("dblclick", (e) => {
     heartIcon.classList.remove("active");
   }, 3000);
 });
+
+hello()
